@@ -1,0 +1,29 @@
+{
+  "name": "nodebb-plugin-smf-to-markdown",
+  "version": "0.0.1",
+  "description": "Convert SMF posts from bbcode to markdown",
+  "main": "library.js",
+  "scripts": {
+    "test": "mocha ./tests -t 1000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a5mith/nodebb-plugin-smf-to-markdown"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "bbcode",
+    "converter",
+    "smf",
+    "SMF"
+  ],
+  "author": {
+    "name": "a5mith",
+    "email": "a_5mith@35hz.co.uk"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/a5mith/nodebb-plugin-smf-to-markdown/issues"
+  }
+}

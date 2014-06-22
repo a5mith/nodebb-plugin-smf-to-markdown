@@ -1,0 +1,10 @@
+{
+	"id": "nodebb-plugin-smf-to-markdown",
+	"name": "NodeBB vBCode to Markdown",
+	"description": "Convert SMF posts from bbcode to markdown.",
+	"url": "https://github.com/a5mith/nodebb-plugin-smf-to-markdown",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "filter:post.parse", "method": "parse", "callbacked": true, "priority": 1 }
+	]
+}
