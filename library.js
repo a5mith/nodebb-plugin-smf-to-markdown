@@ -6,7 +6,7 @@ var converter = {};
 
 function parseQuotes(content) {
 	var quote, quoteBlock,
-		re = /\[quote author=([\s\S]*?)]([\s\S]*?)\[\/quote\]/gi;
+		re = /\[quote author=([\s\S]*?)[\S]*?\]([\s\S]*?)\[\/quote\]/gi;
 
 	while(quote = content.match(re)) {
 		quote = quote[0];
