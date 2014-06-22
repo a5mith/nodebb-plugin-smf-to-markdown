@@ -6,7 +6,7 @@ var converter = {};
 
 function parseQuotes(content) {
 	var quote, quoteBlock,
-		re = /\[quote author=([\s\S]*?)[\S]*?\]([\s\S]*?)\[\/quote\]/gi;
+		re = /\[quote=([\s\S]*?);[\S]*?\]([\s\S]*?)\[\/quote\]/gi;
 
 	while(quote = content.match(re)) {
 		quote = quote[0];
@@ -20,13 +20,12 @@ function parseQuotes(content) {
 converter.parse = function(postContent, callback) {
 	postContent = postContent
 		.replace('&#58;', ':')
-        .replace('&quot;', '"')
 		.replace(/\[\S?color[\s\S]*?\]/gi, '')
 		.replace(/\[\S?b\]/gi, '**')
 		.replace(/\[url="(https?:[\s\S]*?)*?"\]([\s\S]*?)\[\/url*?\]/gi, '[$2]($1)')
 		.replace(/\[img]([\s\S]*?)\[\/img*?\]/gi, '![image]($1)')
 		.replace(/\[\S?url*?\]/gi, '')
-		.replace(/\[quote\]([\s\S]*?)\[\/quote\]/gi, '> $1')
+		.replace(/\[quote\]([\s\S]*?)\[\/quote\]/gi, '> $1 said')
 		.replace(/\[\S?[i|u]\]/gi, '*');
 
 	postContent = parseQuotes(postContent);
